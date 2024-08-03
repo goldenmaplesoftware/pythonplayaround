@@ -9,7 +9,6 @@ class Item:
     self.itemPrice=itemPrice
 
 
-
 #Dictionary of already preassigned items
 class menu:
   item1=Item("Burger","Beef","Beef burger",5.00)
@@ -17,14 +16,16 @@ class menu:
 
   class Player:
     def __init__(self, name):
+      
       self.name = name
 
       def displayName(self):
         print("Player Name: {self.name}")
+        
 
-
-
-
+# create class
+class GameMode:
+    name = "BLANK"
 
 
 class main:
@@ -35,22 +36,28 @@ class main:
         print("Starting game:")
         playerName= input("Enter your name\n")
         print("Welcome to the restaurant business;",playerName)
-        resturantType=input("Do you want to open a resturant that serves burgers, or pizzas?\n")
+        resturantType=input("Do you want to open a restaurant that serves burgers, or pizzas?\n")
       #2{
         match resturantType:
           case "Burgers"|"burgers":
-            print("burger option")
+            gameMode1 = GameMode()
+          # modify the name property
+            print("Before getting overwritten:", gameMode1.name)
+            gameMode1.name = "This is the burger game mode test"
+            print("After getting overwritten:", gameMode1.name)
           case "Pizzas"|"pizzas:":
             print("pizza option")
        #2}
 
 
       case "End"|"end":
-        print("Ending game:")
+        print("Ending game...")
         sys.exit()
 
       case _:
         print("Invalid input, try again!")
         sys.exit()
       #1}  
+
+
     
