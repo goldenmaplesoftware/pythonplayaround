@@ -1,4 +1,5 @@
 import sys 
+
 #Initial definition of what an item classifies as
 class Item:
   def __init__(self,menuCategory,itemName,itemDescription,itemPrice):
@@ -14,19 +15,4 @@ class menu:
   
 
 class main:
-
-  print("Online Menu")
-
-
-  option=input()
-  
-  match option:
-    
-    case "Menu Items"|"menu items"|"Menu items"|"menu Items":
-      print(menu.item1.itemName)
-      print(menu.item2.itemName)
-
-    case _:
-      print("Invalid")
-
-      optionsToSelect()
+    print("fuck you")
