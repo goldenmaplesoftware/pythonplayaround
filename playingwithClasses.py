@@ -8,11 +8,49 @@ class Item:
     self.itemDescription=itemDescription
     self.itemPrice=itemPrice
 
+
+
 #Dictionary of already preassigned items
 class menu:
-  item1=Item("Appetizer","Fried Shrimp","A delicious assortment of deep shrimp",10.95)
-  item2=Item("Appetizer","Beef Tips","Savory beef cut from the freshest tenderloin on the market, locally produced;  Tossed in a Cajun spice",13.50)
-  
+  item1=Item("Burger","Beef","Beef burger",5.00)
+  item2=Item("Burger","Chicken","Chicken burger",5.50)
+
+  class Player:
+    def __init__(self, name):
+      self.name = name
+
+      def displayName(self):
+        print("Player Name: {self.name}")
+
+
+
+
+
 
 class main:
-    print("fuck you")
+    optionBeginGame=input("Type start to begin game, type end to end game\n")
+    match optionBeginGame:
+    #1{  
+      case "Start"|"start":
+        print("Starting game:")
+        playerName= input("Enter your name\n")
+        print("Welcome to the restaurant business;",playerName)
+        resturantType=input("Do you want to open a resturant that serves burgers, or pizzas?\n")
+      #2{
+        match resturantType:
+          case "Burgers"|"burgers":
+            print("burger option")
+          case "Pizzas"|"pizzas:":
+            print("pizza option")
+       #2}
+
+
+      case "End"|"end":
+        print("Ending game:")
+        sys.exit()
+
+      case _:
+        print("Invalid input, try again!")
+        sys.exit()
+      #1}  
+    
